@@ -1,0 +1,227 @@
+/* Main theme customization */
+:root {
+  --vp-c-brand: #e63946;
+  --vp-c-brand-light: #f94957;
+  --vp-c-brand-lighter: #ff5b68;
+  --vp-c-brand-dark: #d32836;
+  --vp-c-brand-darker: #c01d2a;
+  
+  --vp-font-family-base: "Open Sans", "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+  --vp-font-family-mono: Consolas, Monaco, "Andale Mono", monospace;
+}
+
+
+
+
+/* 
+.vp-icon {
+  font-size: 24px;
+  vertical-align: middle;
+  color: var(--vp-c-brand);
+} */
+
+/* Alert banner for urgent information */
+.alert-banner {
+  background-color: rgba(230, 57, 70, 0.1);
+  border-left: 4px solid var(--vp-c-brand);
+  padding: 16px;
+  margin: 20px 0;
+  border-radius: 4px;
+}
+
+.alert-banner strong {
+  color: var(--vp-c-brand);
+}
+
+/* News grid for homepage */
+.news-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.news-item {
+  background-color: rgba(241, 250, 238, 0.5);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.news-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.news-item h3 {
+  margin-top: 0;
+  color: var(--vp-c-brand-dark);
+}
+
+.news-item a {
+  display: inline-block;
+  margin-top: 10px;
+  color: var(--vp-c-brand);
+  font-weight: 600;
+}
+
+/* Support section styling */
+.support-section {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  margin: 30px 0;
+}
+
+.support-item {
+  background-color: rgba(168, 218, 220, 0.2);
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+}
+
+.support-item h3 {
+  margin-top: 0;
+  color: #2a6f97;
+}
+
+.support-item a {
+  display: inline-block;
+  margin-top: 10px;
+  background-color: #2a6f97;
+  color: white;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: 600;
+  transition: background-color 0.3s ease;
+}
+
+.support-item a:hover {
+  background-color: #1d3557;
+}
+
+/* Legal resources page styling */
+.report-form {
+  margin: 30px 0;
+  text-align: center;
+}
+
+.report-button {
+  display: inline-block;
+  background-color: var(--vp-c-brand);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.report-button:hover {
+  background-color: var(--vp-c-brand-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .news-grid, .support-section {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* Safety tips page enhancements */
+.safety-icon {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  margin-right: 8px;
+  vertical-align: middle;
+}
+
+.emergency-contacts {
+  background-color: rgba(230, 57, 70, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  margin: 30px 0;
+}
+
+.emergency-contacts h2 {
+  color: var(--vp-c-brand);
+  margin-top: 0;
+}
+
+/* Print styles for downloadable resources */
+@media print {
+  .navbar, .sidebar, .footer {
+    display: none;
+  }
+  
+  .content {
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 18pt;
+  }
+  
+  h2 {
+    font-size: 16pt;
+  }
+  
+  p, li {
+    font-size: 12pt;
+  }
+  
+  
+}
+.map-container {
+  margin: 20px 0;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.1);
+}
+
+.map-legend-item {
+  display: inline-flex;
+  align-items: center;
+  margin-right: 20px;
+  margin-bottom: 10px;
+}
+
+.map-legend-item:before {
+  content: '';
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 8px;
+  border: 2px solid white;
+  box-shadow: 0 0 0 1px rgba(0,0,0,0.2);
+}
+
+.map-legend-item.ongoing:before {
+  background-color: #c00;
+}
+
+.map-legend-item.planned:before {
+  background-color: #F4D03F;
+}
+
+.report-button {
+  display: inline-block;
+  background-color: var(--vp-c-brand);
+  color: white;
+  padding: 12px 24px;
+  border-radius: 4px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+  margin: 20px 0;
+}
+
+.report-button:hover {
+  background-color: var(--vp-c-brand-dark);
+}

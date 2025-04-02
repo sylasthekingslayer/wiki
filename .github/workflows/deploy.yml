@@ -1,0 +1,18 @@
+name: Deploy Website
+on: [push]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: Deploying to surge
+
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3
+        with:
+          node-version: 18
+      - run: npm i -g pnpm
+      - run: pnpm add surge
+      - run: pnpm add vitepress
+      - run: pnpm docs:build
+      - run: pnpm surge ./docs/.vitepress/dist ${{ secrets.SURGE_DOMAIN }} --token ${{ secrets.SURGE_TOKEN }}
