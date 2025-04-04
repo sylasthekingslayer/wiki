@@ -2,6 +2,7 @@ local_backend: false
 backend:
   repo: sylasthekingslayer/wiki
   branch: main
+  base_url: https://direnis.net
   name: github
 media_folder: docs/public/images
 public_folder: /images

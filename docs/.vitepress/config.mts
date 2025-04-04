@@ -72,7 +72,8 @@ export default defineConfig({
           backend: {
             name: 'github',
             repo: 'sylasthekingslayer/wiki',
-            branch: 'main'
+            branch: 'main',
+            baseUrl: 'https://direnis.net'
           },
           mediaFolder: 'docs/public/images',
           publicFolder: '/images',
