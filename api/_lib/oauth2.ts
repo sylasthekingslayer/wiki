@@ -1,17 +1,19 @@
-import simpleOauthModule from "simple-oauth2";
+import { AuthorizationCode } from 'simple-oauth2';
 
-export const create = () =>
-  simpleOauthModule.create({
+export const create = () => {
+  const config = {
     client: {
-      id: process.env.OAUTH_CLIENT_ID,
-      secret: process.env.OAUTH_CLIENT_SECRET
+      id: process.env.OAUTH_CLIENT_ID!,
+      secret: process.env.OAUTH_CLIENT_SECRET! 
     },
     auth: {
       tokenHost: `https://github.com`,
       tokenPath: `/login/oauth/access_token`,
       authorizePath: `/login/oauth/authorize`
     }
-  });
+  };
+  return new AuthorizationCode(config);
+}
 
 type RenderBody = {
   (status: "success", content: { token: string; provider: "github" }): string;

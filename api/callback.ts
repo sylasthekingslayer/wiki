@@ -43,15 +43,17 @@ app.get('/api/callback', async (req: express.Request, res: express.Response) => 
   const oauth2 = create();
 
   try {
-    const accessToken = await oauth2.authorizationCode.getToken({
+    const accessToken = await oauth2.getToken({
       code,
       redirect_uri: `https://${host}/api/callback`
     });
-    const { token } = oauth2.accessToken.create(accessToken);
+    // The result from getToken is an AccessToken object which contains the token details.
+    // Access the access_token directly from the token property.
+    const tokenValue = accessToken.token.access_token;
 
     res.status(200).send(
       renderBody("success", {
-        token: token.access_token,
+        token: tokenValue as string, // Cast to string
         provider: "github"
       })
     );
