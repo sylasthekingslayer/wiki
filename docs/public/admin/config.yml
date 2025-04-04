@@ -1,31 +1,17 @@
-# Backend: GitHub ile bağlantı ayarları
 backend:
-  name: github # GitHub backend'ini kullan
-  repo: sylasthekingslayer/wiki # GitHub deponuz (kullaniciadi/repoadi)
-  branch: main # Çalışılacak dal (genellikle main veya master)
-  site_domain: direnis.net # Canlı sitenizin domain'i (OAuth yönlendirmesi için önemli)
-  # base_url: https://direnis.net # Gerekirse base_url de eklenebilir, ancak site_domain genellikle yeterlidir
-  # auth_endpoint: /api/auth # Vercel ile kimlik doğrulama için endpoint (git-gateway yerine github backend kullanırken genellikle gerekmez)
+  name: test-repo
 
-# Medya dosyalarının depolandığı ve erişildiği yer
-# Not: Bu yollar projenizin kök dizinine göredir.
-media_folder: "docs/public/images/uploads" # Yüklenen resimlerin kaydedileceği yer (depodaki yol)
-public_folder: "/images/uploads" # Resimlerin public URL yolu (site kökünden itibaren)
+media_folder: "docs/public/images"
+public_folder: "/images"
 
-# İçerik Koleksiyonları
 collections:
-  - name: "pages" # Koleksiyonun adı (kod içinde kullanılır)
-    label: "Sayfalar" # CMS arayüzünde görünecek etiket
-    label_singular: "Sayfa" # Tekil etiket
-    folder: "docs" # Bu koleksiyondaki dosyaların bulunduğu klasör (depodaki yol)
-    create: true # Yeni sayfa oluşturmaya izin ver
-    slug: "{{slug}}" # Dosya adını slug'dan al (genellikle başlığın URL dostu hali)
-    identifier_field: "title" # Liste görünümünde hangi alanın gösterileceği
-    extension: "md" # Dosya uzantısı
-    format: "frontmatter" # Markdown formatı (ön-madde + içerik)
-    fields: # Sayfa için düzenlenebilir alanlar
-      - { label: "Başlık (Title)", name: "title", widget: "string" } # Sayfa başlığı
-      - { label: "İçerik (Body)", name: "body", widget: "markdown" } # Ana içerik alanı
-      # Not: VitePress genellikle slug'ı dosya adından alır.
-      # Eğer slug'ı manuel yönetmek isterseniz, aşağıdaki alanı ekleyebilirsiniz:
-      # - { label: "URL Parçası (Slug)", name: "slug", widget: "string" }
+  - name: "pages"
+    label: "Sayfalar"
+    folder: "docs"
+    create: true
+    slug: "{{slug}}"
+    extension: "md"
+    format: "frontmatter" 
+    fields:
+      - { label: "Başlık", name: "title", widget: "string" } 
+      - { label: "İçerik", name: "body", widget: "markdown" }

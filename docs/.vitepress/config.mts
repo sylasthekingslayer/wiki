@@ -1,6 +1,6 @@
 import { defineConfig } from "vitepress";
+
 //yorum
-// Removed decap import
 export default defineConfig({
   title: "Direniş Wiki",
   titleTemplate: "Direniş Wiki",
@@ -106,9 +106,14 @@ export default defineConfig({
     optimizeDeps: {
       exclude: ["leaflet"],
     },
-    plugins: [
-      // Removed decap plugin configuration
-    ],
+    // Decap CMS'i public/admin klasöründen çalıştırdığımız için plugin'e gerek yok.
+    // plugins: [ ... ],
+    // Decap CMS'in proje kök dizinindeki dosyalara erişebilmesi için izin veriyoruz.
+    server: {
+      fs: {
+        allow: ['..']
+      }
+    }
   },
 
   head: [
