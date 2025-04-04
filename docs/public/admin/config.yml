@@ -1,0 +1,68 @@
+local_backend: false
+backend:
+  repo: sylasthekingslayer/wiki
+  branch: main
+  name: github
+media_folder: docs/public/images
+public_folder: /images
+collections:
+  - name: eylem_bilgileri
+    label: Eylem Bilgileri
+    folder: docs
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Başlık
+        name: title
+        widget: string
+      - label: İçerik
+        name: body
+        widget: markdown
+  - name: hukuki_kaynaklar
+    label: Hukuki Kaynaklar
+    folder: docs
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Başlık
+        name: title
+        widget: string
+      - label: İçerik
+        name: body
+        widget: markdown
+  - name: diger
+    label: Diğer
+    folder: docs
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Başlık
+        name: title
+        widget: string
+      - label: İçerik
+        name: body
+        widget: markdown
+  - name: gundem
+    label: Gündem
+    folder: docs
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - label: Başlık
+        name: title
+        widget: string
+      - label: İçerik
+        name: body
+        widget: markdown
+  - name: anasayfa
+    label: Ana Sayfa
+    folder: docs
+    create: false
+    slug: "{{slug}}"
+    fields:
+      - label: Başlık
+        name: title
+        widget: string
+      - label: İçerik
+        name: body
+        widget: markdown
