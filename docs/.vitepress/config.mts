@@ -1,9 +1,6 @@
 import { defineConfig } from "vitepress";
-import decap, {
-  createFolderCollection,
-  createField,
-} from 'vite-plugin-decap-cms';
 //yorum
+// Removed decap import
 export default defineConfig({
   title: "Direniş Wiki",
   titleTemplate: "Direniş Wiki",
@@ -110,59 +107,7 @@ export default defineConfig({
       exclude: ["leaflet"],
     },
     plugins: [
-      decap({
-        // Decap CMS admin panelini /admin altında sunar
-        // Daha fazla bilgi: https://vite-plugin-decap-cms.netlify.app/
-        config: {
-          // Backend ayarları: GitHub deposuna bağlanma
-          backend: {
-            name: 'github', // GitHub backend'ini kullan
-            repo: 'sylasthekingslayer/wiki', // GitHub deponuz (kullaniciadi/repoadi)
-            branch: 'main', // Çalışılacak dal (genellikle main veya master)
-            baseUrl: 'https://direnis.net', // Vercel URL'niz (OAuth için gerekli) - Corrected to camelCase
-            authEndpoint: '/api/auth', // Vercel ile kimlik doğrulama için endpoint - Corrected to camelCase
-          },
-          // Medya dosyalarının depolandığı ve erişildiği yer
-          mediaFolder: 'docs/public/images/uploads', // Yüklenen resimlerin kaydedileceği yer - Corrected to camelCase
-          publicFolder: '/images/uploads', // Resimlerin public URL yolu - Corrected to camelCase
-          // İçerik modelleri
-          collections: [
-            {
-              name: 'pages', // Koleksiyonun adı (kod içinde kullanılır)
-              label: 'Sayfalar', // CMS arayüzünde görünecek etiket
-              labelSingular: 'Sayfa', // Tekil etiket - Corrected to camelCase
-              folder: 'docs', // Bu koleksiyondaki dosyaların bulunduğu klasör
-              create: true, // Yeni sayfa oluşturmaya izin ver
-              slug: '{{fields.slug}}', // Dosya adını 'slug' alanından al
-              identifierField: 'title', // Liste görünümünde hangi alanın gösterileceği - Corrected to camelCase
-              extension: 'md', // Dosya uzantısı
-              format: 'frontmatter', // Markdown formatı (ön-madde + içerik)
-              fields: [ // Sayfa için düzenlenebilir alanlar
-                { label: 'Başlık (Title)', name: 'title', widget: 'string' }, // Sayfa başlığı
-                { label: 'URL Parçası (Slug)', name: 'slug', widget: 'string' }, // Dosya adı ve URL için
-                { label: 'İçerik (Body)', name: 'body', widget: 'markdown' }, // Ana içerik alanı
-              ]
-              // Filter removed to fix TS error
-            },
-            // İsterseniz index.md için ayrı bir koleksiyon tanımlayabilirsiniz
-            // {
-            //   name: 'homepage',
-            //   label: 'Ana Sayfa',
-            //   files: [
-            //     {
-            //       label: 'Ana Sayfa İçeriği',
-            //       name: 'index',
-            //       file: 'docs/index.md',
-            //       fields: [
-            //         // Ana sayfa için özel alanlar...
-            //         { label: 'İçerik', name: 'body', widget: 'markdown' }
-            //       ]
-            //     }
-            //   ]
-            // }
-          ],
-        },
-      }),
+      // Removed decap plugin configuration
     ],
   },
 
