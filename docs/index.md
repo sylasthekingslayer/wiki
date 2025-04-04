@@ -65,6 +65,7 @@ features:
 - [itaatet.me](https://itaatet.me/) - ODTÜ Boykot Haritası
 - [Özgürlük Haritası](https://www.ozgurlukharitasi.com/)
 - [protesto.cc](https://protesto.cc/)
+- [Sokaklar Bizim](https://sokaklarbizim.com/)
 - [Velvele](https://velvele.net/)
 - [Yandaşlar Boykot](https://yandaslarboykot.com/)
 - [Zulme Tanık Ol](https://zulmetanikol.me/) - Protestolardaki polis şiddetini gösteren site

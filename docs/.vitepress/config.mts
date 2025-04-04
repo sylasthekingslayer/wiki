@@ -40,49 +40,6 @@ export default defineConfig({
           { link: "/galeri", text: "Galeri" },
         ],
       },
-      {
-        text: "Diğer Web Siteleri",
-        items: [
-          {
-            text: "Özgürlük Haritası",
-            link: "https://www.ozgurlukharitasi.com/",
-            target: "_blank",
-          },
-          { text: "itaatet.me", link: "https://itaatet.me/", target: "_blank" },
-          {
-            text: "protesto.cc",
-            link: "https://protesto.cc/",
-            target: "_blank",
-          },
-          //{ text: "Sokaklar Bizim", link: "https://sokaklarbizim.com/", target: "_blank" },
-          {
-            text: "Zulme Tanık Ol",
-            link: "https://zulmetanikol.me/",
-            target: "_blank",
-          },
-          { text: "Velvele", link: "https://velvele.net/", target: "_blank" },
-          {
-            text: "Yandaşlar Boykot",
-            link: "https://yandaslarboykot.com/",
-            target: "_blank",
-          },
-          {
-            text: "boykotla.app",
-            link: "https://boykotla.app/",
-            target: "_blank",
-          },
-          {
-            text: "boykotyap.com",
-            link: "https://boykotyap.com/",
-            target: "_blank",
-          },
-          {
-            text: "boykot.web.tr",
-            link: "https://boykot.web.tr/",
-            target: "_blank",
-          },
-        ],
-      },
     ],
     footer: {
       message: "Hak, hukuk, adalet!",
@@ -113,7 +70,9 @@ export default defineConfig({
       decap({
         config: {
           backend: {
-            name: 'test-repo',
+            name: 'github',
+            repo: 'sylasthekingslayer/wiki',
+            branch: 'main'
           },
           mediaFolder: 'docs/public/images',
           publicFolder: '/images',
