@@ -1,4 +1,21 @@
-import { defineConfig } from "vitepress";
+import { defineConfig, type PageData } from "vitepress";
+
+// Ana sayfadaki kartların sırasına göre navigasyon listesi
+// Gündem kaldırıldığı için Hazırlık ile başlıyor
+const navigationOrder = [
+  { link: '/hazirlik', text: 'Hazırlık' },
+  { link: '/eylem', text: 'Eylem' },
+  { link: '/kortej', text: 'Kortej' },
+  { link: '/ilkyardim', text: 'İlk Yardım' },
+  { link: '/polis-taktikleri', text: 'Polis Taktikleri' },
+  { link: '/antiasit', text: 'Anti-Asit Formülleri' }, // Başlık index.md'den alındı
+  { link: '/hukuk', text: 'Yasal Kaynaklar' }, // Başlık index.md'den alındı
+  { link: '/hukuk-numaralari', text: 'Avukat/Baro Numaraları' }, // Başlık index.md'den alındı
+  { link: '/boykot', text: 'Boykot' },
+  { link: '/topluluklar', text: 'Topluluklar' },
+  { link: '/dijital', text: 'Güvenli İletişim' }, // Başlık index.md'den alındı
+  { link: '/galeri', text: 'Galeri' }
+];
 
 //yorum
 export default defineConfig({
@@ -8,7 +25,6 @@ export default defineConfig({
   cleanUrls: true,
   themeConfig: {
     sidebar: [
-      { link: "/gundem", text: "Gündem" },
       {
         text: "Eylem Bilgileri",
         items: [
@@ -40,45 +56,20 @@ export default defineConfig({
       {
         text: "Diğer Web Siteleri",
         items: [
-          {
-            text: "Özgürlük Haritası",
-            link: "https://www.ozgurlukharitasi.com/",
-            target: "_blank",
-          },
+          { text: "301 Genç", link: "https://www.301genc.com/", target: "_blank" },
+          { text: "boykot.web.tr", link: "https://boykot.web.tr/", target: "_blank" },
+          { text: "boykotla.app", link: "https://boykotla.app/", target: "_blank" },
+          { text: "boykotyap.com", link: "https://boykotyap.com/", target: "_blank" },
+          { text: "Direniş Arşivi", link: "https://direnisarsivi.com.tr", target: "_blank" },
+          { text: "diren-turkiye Sansürle Mücadele Rehberi Repository", link: "https://github.com/diren-turkiye/diren-turkiye", target: "_blank" },
           { text: "itaatet.me", link: "https://itaatet.me/", target: "_blank" },
-          {
-            text: "protesto.cc",
-            link: "https://protesto.cc/",
-            target: "_blank",
-          },
-          //{ text: "Sokaklar Bizim", link: "https://sokaklarbizim.com/", target: "_blank" },
-          {
-            text: "Zulme Tanık Ol",
-            link: "https://zulmetanikol.me/",
-            target: "_blank",
-          },
+          { text: "Özgürlük Haritası", link: "https://www.ozgurlukharitasi.com/", target: "_blank" },
+          { text: "protesto.cc", link: "https://protesto.cc/", target: "_blank" },
+          //{ text: "Sokaklar Bizim", link: "https://sokaklarbizim.com/", target: "_blank" }, // Bu satır yorumlu kalmalı
           { text: "Velvele", link: "https://velvele.net/", target: "_blank" },
-          {
-            text: "Yandaşlar Boykot",
-            link: "https://yandaslarboykot.com/",
-            target: "_blank",
-          },
-          {
-            text: "boykotla.app",
-            link: "https://boykotla.app/",
-            target: "_blank",
-          },
-          {
-            text: "boykotyap.com",
-            link: "https://boykotyap.com/",
-            target: "_blank",
-          },
-          {
-            text: "boykot.web.tr",
-            link: "https://boykot.web.tr/",
-            target: "_blank",
-          },
-        ],
+          { text: "Yandaşlar Boykot", link: "https://yandaslarboykot.com/", target: "_blank" },
+          { text: "Zulme Tanık Ol", link: "https://zulmetanikol.me/", target: "_blank" },
+        ].sort((a, b) => a.text.localeCompare(b.text, 'tr')), // Alfabetik sıralama eklendi
       },
     ],
     footer: {
@@ -124,6 +115,31 @@ export default defineConfig({
         rel: "stylesheet",
         href: "https://unpkg.com/leaflet@1.9.4/dist/leaflet.css",
       },
-    ], 
+    ],
   ],
+  // Sayfa verilerini dönüştürerek otomatik prev/next ekleme
+  transformPageData(pageData: PageData) {
+    const currentPageIndex = navigationOrder.findIndex(
+      // pageData.relativePath sonunda '.md' içerir, link ise içermez.
+      (item) => item.link === '/' + pageData.relativePath.replace('.md', '')
+    );
+
+    if (currentPageIndex !== -1) {
+      const prevPage = navigationOrder[currentPageIndex - 1];
+      const nextPage = navigationOrder[currentPageIndex + 1];
+
+      if (prevPage) {
+        pageData.frontmatter.prev = {
+          text: prevPage.text,
+          link: prevPage.link
+        };
+      }
+      if (nextPage) {
+        pageData.frontmatter.next = {
+          text: nextPage.text,
+          link: nextPage.link
+        };
+      }
+    }
+  }
 });

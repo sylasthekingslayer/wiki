@@ -1,5 +1,8 @@
 {
   "version": 2,
+  "framework": "vitepress",
+  "buildCommand": "pnpm run docs:build",
+  "outputDirectory": "docs/.vitepress/dist",
   "builds": [
     {
       "src": "api/**/*.ts",

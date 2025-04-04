@@ -3,10 +3,6 @@ title: Direniş Wiki Ana Sayfa
 layout: home
 
 features:
-  - icon: 📰
-    title: "Gündem"
-    details: "En son yaşanan olaylar vb"
-    link: /gundem
   - icon: 🧰
     title: "Hazırlık"
     details: "Eyleme gitmeden önce"
@@ -60,17 +56,18 @@ features:
 
 ## Diğer Siteler
 
-- [Özgürlük Haritası](https://www.ozgurlukharitasi.com/)
-- [itaatet.me](https://itaatet.me/) - ODTÜ Boykot Haritası
-- [protesto.cc](https://protesto.cc/)
-- [boykotyap.com](https://boykotyap.com/)
+- [301 Genç](https://www.301genc.com/)
 - [boykot.web.tr](https://boykot.web.tr/)
 - [boykotla.app](https://boykotla.app/)
-- [Zulme Tanık Ol](https://zulmetanikol.me/) - Protestolardaki polis şiddetini gösteren site
-- [Yandaşlar Boykot](https://yandaslarboykot.com/)
-- [Velvele](https://velvele.net/)
+- [boykotyap.com](https://boykotyap.com/)
+- [Direniş Arşivi](https://direnisarsivi.com.tr) - Alternatif bir wiki
 - [diren-turkiye Sansürle Mücadele Rehberi Repository](https://github.com/diren-turkiye/diren-turkiye)
-- [Direniş Arşivi](https://direnisarsivi.com.tr) - Alternatif bir wiki 
+- [itaatet.me](https://itaatet.me/) - ODTÜ Boykot Haritası
+- [Özgürlük Haritası](https://www.ozgurlukharitasi.com/)
+- [protesto.cc](https://protesto.cc/)
+- [Velvele](https://velvele.net/)
+- [Yandaşlar Boykot](https://yandaslarboykot.com/)
+- [Zulme Tanık Ol](https://zulmetanikol.me/) - Protestolardaki polis şiddetini gösteren site
 
 <div class="contact-button">
   <a href="/iletisim" class="contact-link">
