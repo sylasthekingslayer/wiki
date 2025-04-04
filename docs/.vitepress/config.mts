@@ -71,9 +71,9 @@ export default defineConfig({
         config: {
           backend: {
             name: 'github',
-            repo: 'sylasthekingslayer/wiki', // Depo adınızı kontrol edin
+            repo: 'sylasthekingslayer/wiki',
             branch: 'main',
-            authEndpoint: '/auth' // Bu satırı ekleyin veya güncelleyin
+            baseUrl: 'https://direnis.net'
           },
           mediaFolder: 'docs/public/images',
           publicFolder: '/images',
