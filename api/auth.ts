@@ -1,63 +1,38 @@
-import { VercelRequest, VercelResponse } from "@vercel/node";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 import crypto from "crypto";
 import { create } from "./_lib/oauth2";
-import cors from "cors";
 import dotenv from "dotenv";
-import express from "express";
-import helmet from "helmet";
-import { IncomingMessage, ServerResponse, createServer } from "http";
 
 dotenv.config();
 
-const app: express.Application = express();
-
-app.use(
-  helmet({
-    contentSecurityPolicy: {
-      directives: {
-        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-        "script-src": ["'self'", "'unsafe-inline'"],
-      },
-    },
-  })
-);
-
-
-app.use(cors({
-  allowedHeaders: [
-    'Origin',
-    'X-Requested-With',
-    'Content-Type',
-    'Accept',
-    'X-Access-Token',
-  ],
-  credentials: true,
-  methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-  preflightContinue: false,
-  origin: '*',
-}));
-
 export const randomString = () => crypto.randomBytes(4).toString(`hex`);
 
-app.get('/api/auth', (req: express.Request, res: express.Response) => {
-  const { host } = req.headers;
+export default (req: VercelRequest, res: VercelResponse) => {
+  if (req.method !== 'GET') {
+    res.status(405).send('Method Not Allowed');
+    return;
+  }
+
+  const host = req.headers.host;
+  if (!host) {
+    res.status(400).send('Host header is missing');
+    return;
+  }
 
   const oauth2 = create();
 
-  const url = oauth2.authorizeURL({
-    redirect_uri: `https://${host}/api/callback`,
-    scope: `repo,user`,
-    state: randomString()
-  });
+  try {
+    const url = oauth2.authorizeURL({
+      // Vercel'in otomatik HTTPS sağladığını varsayıyoruz, gerekirse protokol kontrolü eklenebilir.
+      redirect_uri: `https://${host}/api/callback`,
+      scope: `repo,user`, // İstenilen GitHub izinleri
+      state: randomString(),
+    });
 
-  res.writeHead(301, { Location: url });
-  res.end();
-});
-
-const server = createServer((req: IncomingMessage, res: ServerResponse) => {
-  app(req as any, res as any);
-});
-
-export default (req: VercelRequest, res: VercelResponse) => {
-  server.emit("request", req, res);
+    // VercelResponse üzerinde redirect metodu bulunur
+    res.redirect(301, url);
+  } catch (error) {
+    console.error("Error creating authorization URL:", error);
+    res.status(500).send("Internal Server Error");
+  }
 };

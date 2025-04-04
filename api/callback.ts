@@ -1,71 +1,59 @@
-import { VercelRequest, VercelResponse } from "@vercel/node";
+import type { VercelRequest, VercelResponse } from "@vercel/node";
 import { create, renderBody } from "./_lib/oauth2";
-import cors from "cors";
 import dotenv from "dotenv";
-import express from "express";
-import helmet from "helmet";
-import { IncomingMessage, ServerResponse, createServer } from "http";
 
 dotenv.config();
 
-const app: express.Application = express();
+export default async (req: VercelRequest, res: VercelResponse) => {
+  // Vercel genellikle CORS'u edge seviyesinde halleder.
+  // Helmet middleware'i serverless ortamda genellikle gereksizdir.
 
-app.use(
-  helmet({
-    contentSecurityPolicy: {
-      directives: {
-        ...helmet.contentSecurityPolicy.getDefaultDirectives(),
-        "script-src": ["'self'", "'unsafe-inline'"],
-      },
-    },
-  })
-);
+  // Sadece GET isteklerini işle
+  if (req.method !== 'GET') {
+    res.status(405).send('Method Not Allowed');
+    return;
+  }
 
+  const code = req.query.code;
+  const host = req.headers.host;
 
-app.use(cors({
-  allowedHeaders: [
-    'Origin',
-    'X-Requested-With',
-    'Content-Type',
-    'Accept',
-    'X-Access-Token',
-  ],
-  credentials: true,
-  methods: 'GET,HEAD,OPTIONS,PUT,PATCH,POST,DELETE',
-  preflightContinue: false,
-  origin: '*',
-}));
+  if (typeof code !== 'string') {
+    res.status(400).send(renderBody("error", new Error("Authorization code is missing or invalid")));
+    return;
+  }
 
-app.get('/api/callback', async (req: express.Request, res: express.Response) => {
-  const code = req.query.code as string;
-  const { host } = req.headers;
+  if (!host) {
+    res.status(400).send(renderBody("error", new Error("Host header is missing")));
+    return;
+  }
 
   const oauth2 = create();
 
   try {
     const accessToken = await oauth2.getToken({
       code,
-      redirect_uri: `https://${host}/api/callback`
+      // Vercel'in otomatik HTTPS sağladığını varsayıyoruz
+      redirect_uri: `https://${host}/api/callback`,
     });
-    // The result from getToken is an AccessToken object which contains the token details.
-    // Access the access_token directly from the token property.
+
+    // AccessToken nesnesinden token değerini al
     const tokenValue = accessToken.token.access_token;
+
+    if (typeof tokenValue !== 'string') {
+      throw new Error("Access token received is not a string.");
+    }
 
     res.status(200).send(
       renderBody("success", {
-        token: tokenValue as string, // Cast to string
-        provider: "github"
+        token: tokenValue,
+        provider: "github",
       })
     );
-  } catch (e) {
-    res.status(200).send(renderBody("error", e));
+  } catch (error) {
+    console.error("Error getting token:", error);
+    // Hata durumunda da renderBody kullanılıyor, hata nesnesini gönderelim
+    // Hata nesnesinin yapısına göre mesajı ayarlamak gerekebilir
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    res.status(500).send(renderBody("error", { message: `Token exchange failed: ${errorMessage}` }));
   }
-});
-
-const server = createServer((req: IncomingMessage, res: ServerResponse) => {
-  app(req as any, res as any);
-});
-
-export default (req: VercelRequest, res: VercelResponse) => {
-  server.emit("request", req, res);
 };
