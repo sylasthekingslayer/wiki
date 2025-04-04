@@ -1,5 +1,6 @@
 backend:
-  name: test-repo
+  name: github
+  repo: sylasthekingslayer/wiki
 
 media_folder: "docs/public/images"
 public_folder: "/images"
