@@ -7,8 +7,21 @@
         <title>Content Manager</title>
     </head>
     <body>
+        <script>
+            window.CMS_MANUAL_INIT = true;
+        </script>
         <script src="https://unpkg.com/decap-cms@^3.1.11/dist/decap-cms.js"></script>
-        
-        
+        <script>
+            const config = {
+                backend: {
+                    name: 'github',
+                    repo: 'sylasthekingslayer/wiki',
+                    branch: 'main',
+                    base_url: 'https://direnis.net',
+                    auth_endpoint: 'api/auth'
+                }
+            };
+            CMS.init({ config });
+        </script>
     </body>
 </html>
