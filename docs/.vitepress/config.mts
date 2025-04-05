@@ -69,19 +69,14 @@ export default defineConfig({
     plugins: [
       decap({
         config: {
-          load_config_file: false,
           backend: {
             name: 'github',
             repo: 'sylasthekingslayer/wiki',
             branch: 'main',
-            base_url: 'https://direnis.net',
-            auth_endpoint: 'api/auth',
-            site_domain: 'direnis.net'
+            baseUrl: 'https://direnis.net'
           },
-          local_backend: false,
-          publish_mode: 'editorial_workflow',
-          media_folder: 'docs/public/images',
-          public_folder: '/images',
+          mediaFolder: 'docs/public/images',
+          publicFolder: '/images',
           collections: [
             {
               name: 'eylem_bilgileri',
