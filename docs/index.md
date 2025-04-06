@@ -52,6 +52,10 @@ features:
     title: "Galeri"
     details: "Eylemlerden Fotolar"
     link: /galeri
+  - icon: 🗺️
+    title: "Eylem Haritası"
+    details: ""
+    link: https://ozgurharita.app/
 ---
 
 ## Diğer Siteler
@@ -63,7 +67,7 @@ features:
 - [Direniş Arşivi](https://direnisarsivi.com.tr) - Alternatif bir wiki
 - [diren-turkiye Sansürle Mücadele Rehberi Repository](https://github.com/diren-turkiye/diren-turkiye)
 - [itaatet.me](https://itaatet.me/) - ODTÜ Boykot Haritası
-- [Özgürlük Haritası](https://www.ozgurlukharitasi.com/)
+- [Özgürlük Haritası](https://ozgurharita.app/)
 - [protesto.cc](https://protesto.cc/)
 - [Sokaklar Bizim](https://sokaklarbizim.com/)
 - [Velvele](https://velvele.net/)

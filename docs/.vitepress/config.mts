@@ -3,7 +3,7 @@ import decap, {
   createFolderCollection,
   createField,
 } from 'vite-plugin-decap-cms';
-//yorum
+
 export default defineConfig({
   title: "Direniş Wiki",
   titleTemplate: "Direniş Wiki",
@@ -73,7 +73,7 @@ export default defineConfig({
             name: 'github',
             repo: 'sylasthekingslayer/wiki',
             branch: 'main',
-            baseUrl: 'https://direnis.net'
+            baseUrl: 'direnis.net'
           },
           mediaFolder: 'docs/public/images',
           publicFolder: '/images',
