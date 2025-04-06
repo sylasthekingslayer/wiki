@@ -74,12 +74,10 @@ features:
 - [Yandaşlar Boykot](https://yandaslarboykot.com/)
 - [Zulme Tanık Ol](https://zulmetanikol.me/) - Protestolardaki polis şiddetini gösteren site
 
-<div class="contact-button">
-  <a href="/iletisim" class="contact-link">
-    <span class="contact-icon">📧</span>
-    <span class="contact-text">İletişime Geç</span>
-  </a>
-</div>
+<a href="/iletisim" class="contact-link">
+  <span class="contact-icon">📧</span>
+  <span class="contact-text">İletişime Geç</span>
+</a>
 
 <style>
 .contact-button {
