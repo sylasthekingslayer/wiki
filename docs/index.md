@@ -64,6 +64,7 @@ features:
 - [boykot.web.tr](https://boykot.web.tr/)
 - [boykotla.app](https://boykotla.app/)
 - [boykotyap.com](https://boykotyap.com/)
+- [boykotluk.org](https://boykotluk.org) - Yandaş TV kanalları ve kanallara reklam veren markaların boykotu
 - [Direniş Arşivi](https://direnisarsivi.com.tr) - Alternatif bir wiki
 - [diren-turkiye Sansürle Mücadele Rehberi Repository](https://github.com/diren-turkiye/diren-turkiye)
 - [itaatet.me](https://itaatet.me/) - ODTÜ Boykot Haritası
