@@ -132,6 +132,17 @@ export default defineConfig({
                 { label: 'Başlık', name: 'title', widget: 'string' },
                 { label: 'İçerik', name: 'body', widget: 'markdown' }
               ]
+            },
+             {
+              name: 'iletisim_bilgileri',
+              label: 'İletişim Bilgileri',
+              folder: 'docs',
+              create: true,
+              slug: '{{slug}}',
+              fields: [
+                { label: 'Başlık', name: 'title', widget: 'string' },
+                { label: 'İçerik', name: 'body', widget: 'markdown' }
+              ]
             }
           ]
         }

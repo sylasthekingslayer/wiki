@@ -3,7 +3,7 @@ title: Avukat/Baro Numaraları
 ---
 
 ::: warning UYARI  
-Numaralar doğrulanmadı ama doğru olması gerek. Yazmadan önce arayıp kontrol edebilirsiniz.
+Numaralar doğrulanmadı. Kontrol edip dilerseniz [geri bildirimde](/iletisim) bulunabilirsiniz.
 :::
 
 [[toc]]
@@ -28,9 +28,9 @@ Numaralar doğrulanmadı ama doğru olması gerek. Yazmadan önce arayıp kontro
 
 ## Ankara
 
-- **552 635 50 95** - ÖDTÜ
-- **543 402 78 07** - ÖDTÜ
-- **507 567 08 55** - ÖDTÜ
+- **552 635 50 95** - ODTÜ
+- **543 402 78 07** - ODTÜ
+- **507 567 08 55** - ODTÜ
 - **533 575 62 62** - Ankara Barosu Acil Yardım Hattı 
 - **533 429 56 56** - Ankara Barosu Acil Yardım Hattı
 - **312 416 72 00** - Ankara Baro Çağrı Merkezi       
