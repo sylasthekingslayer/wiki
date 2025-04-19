@@ -1,9 +1,7 @@
 ---
-title: DENEME
+title: Anti-Asit Formülleri
 ---
-# Anti-Asit Formülleri\
-\
-DENEME DENEME
+# Anti-Asit Formülleri
 
 ## Sıvı Talcid/Rennie
 
@@ -22,5 +20,3 @@ Biber gazının etkisini azaltmak için antiasit içeren çözeltiler (örneğin
 ## Karbonat
 
 Talcid/Rennie yoksa 1 litre suya 1 kaşık karbonat atılıp kullanılabilir
-
-DENEME YAZISI
