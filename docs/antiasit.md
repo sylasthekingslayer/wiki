@@ -1,7 +1,9 @@
 ---
 title: DENEME
 ---
-# Anti-Asit Formülleri
+# Anti-Asit Formülleri\
+\
+DENEME DENEME
 
 ## Sıvı Talcid/Rennie
 
