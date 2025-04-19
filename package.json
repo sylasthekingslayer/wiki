@@ -1,5 +1,7 @@
 {
   "devDependencies": {
+    "@types/react": "18",
+    "@types/react-dom": "18",
     "vite-plugin-decap-cms": "^0.4.0",
     "vitepress": "^1.6.3"
   },
@@ -9,6 +11,9 @@
     "docs:preview": "vitepress preview docs"
   },
   "dependencies": {
+    "netlify-cms-oauth-provider-node": "^2.0.0",
+    "react": "18",
+    "react-dom": "18",
     "vue": "^3.5.13"
   }
 }

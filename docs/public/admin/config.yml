@@ -2,8 +2,9 @@ local_backend: false
 backend:
   repo: sylasthekingslayer/wiki
   branch: main
-  base_url: direnis.net
+  base_url: https://direnis.net
   name: github
+  auth_endpoint: api/auth
 media_folder: docs/public/images
 public_folder: /images
 collections:
