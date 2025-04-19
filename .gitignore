@@ -3,4 +3,4 @@ dist
 .temp
 cache
 package-lock.json
-docs/src/public/admin/
+docs/public/admin/
