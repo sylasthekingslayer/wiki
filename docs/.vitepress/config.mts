@@ -74,8 +74,10 @@ export default defineConfig({
             repo: 'sylasthekingslayer/wiki',
             branch: 'main',
             baseUrl: 'https://direnis.net',
-            authEndpoint: 'api/auth'
-          },
+            authEndpoint: 'api/auth',
+            openAuthoring: true,
+            useGraphql: true
+          },  
           mediaFolder: 'docs/public/images',
           publicFolder: '/images',
           collections: [
