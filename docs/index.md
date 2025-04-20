@@ -56,10 +56,10 @@ features:
     title: "Galeri"
     details: "Eylemlerden Fotolar"
     link: /galeri
-  - icon: 📧
-    title: "İletişim"
-    details: "Bizimle iletişime geçin"
-    link: /iletisim
+  - icon: 🗺️
+    title: "Eylem Haritası"
+    details: ""
+    link: https://ozgurharita.app/
 ---
 
 ## Diğer Siteler
