@@ -4,8 +4,6 @@ title: Boykot ve Ekonomik Direniş
 
 # Boykot
 
-[[toc]]
-
 ## Boykot Nedir?
 
 Boykot nedir? Boykot, bir kuruluşun spesifik politika ve davranışları değişene kadar kadar hiçbir ürün ve hizmetini kullanmayarak ekonomik **baskı** yaratma eylemidir.

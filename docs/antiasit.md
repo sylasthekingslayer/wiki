@@ -3,6 +3,8 @@ title: Anti-Asit Formülleri
 ---
 # Anti-Asit Formülleri
 
+Bu sayfada, biber gazının (göz yaşartıcı gaz) etkilerini hafifletmek için kullanılabilecek anti-asit solüsyonlarının hazırlanışı anlatılmaktadır. Bu solüsyonlar, [İlk Yardım](./ilkyardim.md) müdahalelerinde kullanılır.
+
 ## Sıvı Talcid/Rennie
 
 %50 sıvı anti-asit ilaç ve %50 suyu bir şişeye koyun

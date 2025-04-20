@@ -4,58 +4,62 @@ layout: home
 
 features:
   - icon: 🧰
-    title: "Hazırlık"
+    title: "Genel Hazırlık"
     details: "Eyleme gitmeden önce"
     link: /hazirlik
+  - icon: 🔒
+    title: "Dijital Güvenlik"
+    details: "VPN / DNS"
+    link: /dijital
   - icon: ✊
-    title: "Eylem"
+    title: "Eylem Taktikleri"
     details: "Eylemde ne yapılır"
     link: /eylem
   - icon: 🚧
-    title: "Kortej"
-    details: "Roller ve diziliş."
+    title: "Kortej Düzeni"
+    details: "Roller ve diziliş"
     link: /kortej
+  - icon: 👮
+    title: "Polis Taktikleri"
+    details: "Polis müdahalelerine karşı bilinçlenme"
+    link: /polis-taktikleri
   - icon: ➕
     title: "İlk Yardım"
     details: "Biber gazı, darbe vb. ilk yardımı"
     link: /ilkyardim
-  - icon: 👮
-    title: "Polis Taktikleri"
-    details: ""
-    link: /polis-taktikleri
   - icon:
       src: /images/medichead.png
-    title: "Anti-Asit Formülleri"
-    details: ""
+    title: "Anti-Asit Kullanımı"
+    details: "Biber gazına karşı solüsyonlar"
     link: /antiasit
   - icon: 🛡️
-    title: "Yasal Kaynaklar"
+    title: "Yasal Bilgiler"
     details: "Gözaltına alınırsanız ne yapmanız gerektiği, yasal haklarınız"
     link: /hukuk
-  - icon: 🛡️
+  - icon: ⚖️
     title: "Avukat/Baro Numaraları"
-    details: ""
+    details: "Acil durumlarda iletişim"
     link: /hukuk-numaralari
   - icon: 🚫
-    title: "Boykot"
+    title: "Boykot Bilgileri"
     details: "Tüketimden kaçınarak protesto etmek"
     link: /boykot
+  - icon: 📖
+    title: "Sözlük / Terimler"
+    details: "Sık kullanılan terimler ve anlamları"
+    link: /sozluk
   - icon: 👥
-    title: "Topluluklar"
+    title: "Destekçi Topluluklar"
     details: "Eylemlere katılan topluluklar"
     link: /topluluklar
-  - icon: 🔒
-    title: "Güvenli İletişim"
-    details: "VPN / DNS"
-    link: /dijital
   - icon: 🖼️
     title: "Galeri"
     details: "Eylemlerden Fotolar"
     link: /galeri
-  - icon: 🗺️
-    title: "Eylem Haritası"
-    details: ""
-    link: https://ozgurharita.app/
+  - icon: 📧
+    title: "İletişim"
+    details: "Bizimle iletişime geçin"
+    link: /iletisim
 ---
 
 ## Diğer Siteler

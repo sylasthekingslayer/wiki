@@ -23,7 +23,6 @@ description: Türkiye'deki eylemlerden fotoğraflar
 .masonry-gallery {
   column-count: 4;
   column-gap: 16px;
-  /* VitePress şablonuna uyum için margin eklendi123 */
   margin: 0 24px;
 }
 
@@ -34,7 +33,7 @@ description: Türkiye'deki eylemlerden fotoğraflar
   overflow: hidden;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s, box-shadow 0.3s;
-  display: inline-block; /* Önemli: bloğun sütun içinde doğru şekilde işlenmesini sağlar */
+  display: inline-block;
   width: 100%;
 }
 
@@ -48,10 +47,9 @@ description: Türkiye'deki eylemlerden fotoğraflar
   width: 100%;
   height: auto;
   display: block;
-  object-fit: contain; /* cover yerine contain kullanarak görüntülerin doğal oranını koruyoruz */
+  object-fit: contain; 
 }
 
-/* Responsive düzen için medya sorguları */
 @media (max-width: 1200px) {
   .masonry-gallery {
     column-count: 3;
@@ -70,5 +68,3 @@ description: Türkiye'deki eylemlerden fotoğraflar
   }
 }
 </style>
-
-<!-- <iframe style="width: 100%; height: 70vh; padding-top: 2rem" src="https://direnis2025.ushahidi.io/map" frameborder="0" allowfullscreen></iframe> -->

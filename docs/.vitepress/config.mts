@@ -12,24 +12,44 @@ export default defineConfig({
   themeConfig: {
     sidebar: [
       {
-        text: "Tüm Sayfalar",
+        text: 'Eylem Öncesi',
         items: [
-          { link: "/gundem", text: "Gündem" },
-          { link: "/hazirlik", text: "Hazırlık" },
-          { link: "/eylem", text: "Eylem" },
-          { link: "/kortej", text: "Kortej" },
-          { link: "/antiasit", text: "Anti-Asit" },
-          { link: "/ilkyardim", text: "İlk Yardım" },
-          { link: "/polis-taktikleri", text: "Polis Taktikleri" },
-          { link: "/hukuk", text: "Yasal Bilgiler" },
-          { link: "/hukuk-numaralari", text: "Avukat/Baro Numaraları" },
-          { link: "/sozluk", text: "Sözlük / Terimler" },
-          { link: "/boykot", text: "Boykot" },
-          { link: "/topluluklar", text: "Topluluklar" },
-          { link: "/dijital", text: "VPN/DNS" },
-          { link: "/galeri", text: "Galeri" },
-        ],
+          { link: '/hazirlik', text: 'Genel Hazırlık' },
+          { link: '/dijital', text: 'Dijital Güvenlik (VPN/DNS)' }
+        ]
       },
+      {
+        text: 'Eylem Sırasında',
+        items: [
+          { link: '/eylem', text: 'Eylem Taktikleri' },
+          { link: '/kortej', text: 'Kortej Düzeni' },
+          { link: '/polis-taktikleri', text: 'Polis Taktikleri' },
+          { link: '/ilkyardim', text: 'İlk Yardım' },
+          { link: '/antiasit', text: 'Anti-Asit Kullanımı' }
+        ]
+      },
+      {
+        text: 'Eylem Sonrası ve Haklar',
+        items: [
+          { link: '/hukuk', text: 'Yasal Bilgiler' },
+          { link: '/hukuk-numaralari', text: 'Avukat/Baro Numaraları' }
+        ]
+      },
+      {
+        text: 'Diğer Direniş Yöntemleri',
+        items: [
+          { link: '/boykot', text: 'Boykot Bilgileri' }
+        ]
+      },
+      {
+        text: 'Kaynaklar ve Topluluk',
+        items: [
+          { link: '/sozluk', text: 'Sözlük / Terimler' },
+          { link: '/topluluklar', text: 'Destekçi Topluluklar' },
+          { link: '/galeri', text: 'Galeri' },
+          { link: '/iletisim', text: 'İletişim' } // Added iletisim here
+        ]
+      }
     ],
     footer: {
       message: "Hak, hukuk, adalet!",
@@ -68,7 +88,7 @@ export default defineConfig({
             openAuthoring: true,
             useGraphql: true
           },
-          publish_mode: 'editorial_workflow',
+          publishMode: 'editorial_workflow',
           mediaFolder: 'docs/public/images',
           publicFolder: '/images',
           collections: [

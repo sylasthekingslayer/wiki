@@ -3,6 +3,12 @@ title: Basın ve İletişim Özgülrüğü
 description: Kısıtlanan basın ve iletişim özgürlüğümüzü geri kazanmak için tavsiyeler.
 ---
 
+# Dijital Güvenlik (VPN/DNS/Tor)
+
+Eylemler sırasında ve öncesinde dijital güvenliğinizi sağlamak önemlidir. Bu sayfa, internet sansürünü aşmak ve iletişiminizi daha güvenli hale getirmek için kullanabileceğiniz VPN, Güvenli DNS, Tor gibi araçları ve yöntemleri açıklar. [Hazırlık](./hazirlik.md) sayfasındaki telefon güvenliği ve [Polis Taktikleri](./polis-taktikleri.md) sayfasındaki dijital takip yöntemleri ile birlikte okunması tavsiye edilir.
+
+
+
 # VPN nedir? Ne işe yarar?
 
 Normalde bir internet servis sağlayıcı (İSS), internet trafiğinizi. HTTPS gibi şifreleme protokolleri internette yaygın olarak kullanıldığı için ne yazdığınız veya okuduğunuzu tam olarak göremeseler de eriştiğiniz siteler hakkında bir fikir edinebilirler. Bu şekilde, devletler sansür uygulamaktadır.

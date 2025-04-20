@@ -4,7 +4,7 @@ title: Eylem Bilgileri
 
 # Eylem
 
-[[toc]]
+
 
 ## Eylemden Önce
 

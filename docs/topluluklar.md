@@ -5,8 +5,6 @@ description: Protestocular için topluluk destek kaynakları ve bilgileri
 
 # Topluluklar
 
-[[toc]]
-
 <details>
 <summary>Korkma Biziz</summary>
 
