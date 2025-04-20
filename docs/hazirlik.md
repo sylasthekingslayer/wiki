@@ -4,9 +4,9 @@ title: Hazırlık
 
 # Hazırlık
 
-Protesto öncesi yapmanız gereken şeyler
+Protesto veya [eylem](./eylem.md) öncesi yapmanız gereken hazırlıklar bu sayfada anlatılmaktadır.
 
-[[toc]]
+
 
 ## Ne getirilmez?
 
@@ -19,7 +19,7 @@ Protesto öncesi yapmanız gereken şeyler
 - Rahat ve sizi dış etkenlerden Koruyucu Kıyafetler: Hareket kabiliyetinizi kısıtlamayan, nefes alabilen ama etkenlere dayanıklı giysiler giyin. Vücüdunuzu kapatan kıyafetler cildinizi dış etkenlerden koruyacaktır.
 - Katmanlı Giyim: Burası önemli çünkü biliyorsunuz ki emir kulu polisimiz plastik mermiyi oyuncak sanıyor,ama sahada ve buradaki örnekler de göreceğiniz gibi oyuncaktan olmaktan uzaklar. Bundan korunmak için iki eşofman(içinize hafif ince,dışınıza kalın bir eşofman olabilir)ve iki tişört, üstüne de tercihen içi dolu bir mont veya parka giyebilirsiniz
 - Mümkünce diğerlerine benzemek için siyah giyinin
-- Yedek kıyafet (ıslanabilirsiniz)
+- Yedek kıyafet (ıslanabilirsiniz veya [polis tarafından boya ile işaretlenebilirsiniz](./polis-taktikleri.md#beyaz-toz-boya-ile-i̇şaretlenmek))
 - Saçınızı toplayın (tutulup çekilmemesi için)
 - Bol, takılabilecek veya tutulabilecek şeyler giymeyin (kravat, bol takılar vb.)
 - Sağlam, koşmaya uygun ayakkabılar. Ayakkabı olarak Converse tipi hafif ve bilekten bağlı ayakkabılar sizi hem ayakkabı kaybetmekten hem de bilek burkulmasindan korur. Ayakkabılarınızı bilekten bağlayın.
@@ -82,12 +82,11 @@ Bunları **kolunuza yazın**. Bir parça kağıda da yazabilirsiniz ama kolunuza
 - Planlarınızı katılmayan güvendiğiniz bir kişiyle paylaşın
 
 ::: warning Telefon Güvenliği
+Daha fazla bilgi için [Dijital Güvenlik](./dijital.md) sayfasına bakınız.
+
 Telefonunuzda mutlaka şifre bulundurun. Biyometrik (Face-ID/Parmak izi vb.) kullanıyorsanız **biyometrik ile telefonun kilidinin açılmasını kapatın**.
 
 Telefonunuzu yeniden başlatırsanız biyometriği kabul etmeyecektir.
 
 Polise tutuklanırsanız ve telefonunuza el konulursa biyometrik ile kolayca açabilirler. **Polis size telefonunuzu zorla açtıramaz**
 :::
-
-
-
