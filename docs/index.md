@@ -60,6 +60,10 @@ features:
     title: "Eylem Haritası"
     details: ""
     link: https://ozgurharita.app/
+  - icon: 🫶
+    title: "Katkıda Bulunma"
+    details: "Diğer protestoculara yardım amaçlı bildiklerinizi anlatın!"
+    link: /katki
 ---
 
 ## Diğer Siteler

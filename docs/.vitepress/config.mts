@@ -47,7 +47,8 @@ export default defineConfig({
           { link: '/sozluk', text: 'Sözlük / Terimler' },
           { link: '/topluluklar', text: 'Destekçi Topluluklar' },
           { link: '/galeri', text: 'Galeri' },
-          { link: '/iletisim', text: 'İletişim' } // Added iletisim here
+          { link: '/iletisim', text: 'İletişim' },
+          { link: '/katki', text: 'Katkıda Bulunma' }
         ]
       }
     ],
@@ -94,13 +95,13 @@ export default defineConfig({
           collections: [
             {
               name: 'pages',
-              label: 'Tüm Sayfalar',
+              label: 'Pages',
               folder: 'docs',
               create: true,
               slug: '{{slug}}',
               fields: [
-                { label: 'Başlık', name: 'title', widget: 'string' },
-                { label: 'İçerik', name: 'body', widget: 'markdown' }
+                { label: 'Title', name: 'title', widget: 'string' },
+                { label: 'Content', name: 'body', widget: 'markdown' }
               ]
             }
           ]
