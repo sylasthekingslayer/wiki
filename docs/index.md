@@ -59,7 +59,7 @@ features:
   - icon: 🗺️
     title: "Eylem Haritası"
     details: ""
-    link: https://ozgurharita.app/
+    link: https://ozgurlukharitasi.vercel.app/
   - icon: 🫶
     title: "Katkıda Bulunma"
     details: "Diğer protestoculara yardım amaçlı bildiklerinizi anlatın!"
