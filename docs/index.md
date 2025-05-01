@@ -68,20 +68,21 @@ features:
 
 ## Diğer Siteler
 
+- [False Flagger](https://falseflagger.com/) - Sosyal medyada yapılan yalan haberleri ve trolleri gösteren site
 - [301 Genç](https://www.301genc.com/)
 - [boykot.web.tr](https://boykot.web.tr/)
-- [boykotla.app](https://boykotla.app/)
+- [boykotla.app](https://boykotlar.app/)
 - [boykotyap.com](https://boykotyap.com/)
 - [boykotluk.org](https://boykotluk.org) - Yandaş TV kanalları ve kanallara reklam veren markaların boykotu
-- [Direniş Arşivi](https://direnisarsivi.com.tr) - Alternatif bir wiki
 - [diren-turkiye Sansürle Mücadele Rehberi Repository](https://github.com/diren-turkiye/diren-turkiye)
-- [itaatet.me](https://itaatet.me/) - ODTÜ Boykot Haritası
 - [Özgürlük Haritası](https://ozgurharita.app/)
 - [protesto.cc](https://protesto.cc/)
 - [Sokaklar Bizim](https://sokaklarbizim.com/)
 - [Velvele](https://velvele.net/)
 - [Yandaşlar Boykot](https://yandaslarboykot.com/)
 - [Zulme Tanık Ol](https://zulmetanikol.me/) - Protestolardaki polis şiddetini gösteren site
+- ~~[Direniş Arşivi](https://direnisarsivi.com.tr) Alternatif Wiki~~
+- ~~[itaatet.me](https://itaatet.me/) - ODTÜ Boykot Haritası~~
 
 <a href="/iletisim" class="contact-link">
   <span class="contact-icon">📧</span>
