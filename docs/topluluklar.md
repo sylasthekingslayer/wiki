@@ -29,7 +29,13 @@ Eğer sen de bilgi almak, paylaşmak ve birlikte hareket etmek istiyorsan, bize 
 Birlikte güçlüyüz, birlikte kazanacağız! 
 
 </details>
+<details>
+<summary>r/direnisrehberi</summary>
 
+Organizasyon amacıyla kurulan bir subreddit. Bilgi paylaşımında ana forum olmayı hedeflemektedir.
+
+📍 Subreddit: [r/direnisrehberi](https://www.reddit.com/r/direnisrehberi)
+</details>
 <details>
 <summary>Diğer Topluluklar</summary>
 
