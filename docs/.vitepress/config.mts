@@ -5,6 +5,7 @@ import decap, {
 } from 'vite-plugin-decap-cms';
 
 export default defineConfig({
+  base: "/wiki/",
   title: "Direniş Wiki",
   titleTemplate: "Direniş Wiki",
   description: "Protestocular için kapsamlı bilgi ve güvenlik kaynağı",
